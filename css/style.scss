@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+$defaultContainerPadding: 20px 130px;
+$defaultContentPadding: 0px 100px;
+$themeBackground: #FB5849;
+$themeColor: #FB5849;
+$defaultTransition: all 0.5s ease;
+%poppinsBold{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+%poppinsRegularForParagraph{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+%alignCenterThings{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+%defaultButton{
+  color: #fff;
+  padding: 8px 20px;
+  background: $themeBackground;
+  border: none;
+}
+body{
+  font-size: 14px;
+  @extend %poppinsRegularForParagraph;
+  a{
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+  }
+}
+.navbar{
+  background: #fff;
+  padding: $defaultContainerPadding;
+  box-shadow: 0px 3px 20px 0px #0000002b;
+  .nav-item{
+    .nav-link{
+      color: black;
+      padding-left: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      &:hover{
+        color: $themeColor;
+      }
+    }
+    .dropdown-menu-custom{
+      position: relative;
+    }
+    i{
+      position: absolute;
+      bottom: 12px;
+      right: -5px;
+      font-size: 12px;
+      color: black;
+    }
+  }
+  ul.dropdown-menu-custom-parent{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: $defaultTransition;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    li{
+      display: block;
+      transition-duration: .8s;
+      clear: both;
+      width: 100%;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    &:hover{
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+  }
+}
+.top-left-bg{
+  position: relative;
+  height: 100%;
+  img{
+    position: absolute;
+    left: -90px;
+    height: 95.8%;
+  }
+  .top-left-bg-contents{
+    @extend %alignCenterThings;
+  }
+  h1{
+    font-size: 54px;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+  }
+  p{
+    font-size: 16px;
+    @extend %poppinsBold;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  .btn{
+    background: #fff;
+    color: $themeColor;
+    font-size: 14px;
+    border: 0px;
+    @extend %defaultButton;
+    @extend %poppinsRegularForParagraph
+  }
+}
+.owl-prev, .owl-next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.owl-prev{
+  left: 4rem;
+  i{
+    font-size: 40px;
+    @extend %defaultButton;
+    border-radius: 30px;
+    opacity: .5;
+  }
+}
+.owl-next{
+  right: 4rem;
+  i{
+    @extend %defaultButton;
+    font-size: 40px;
+    border-radius: 30px;
+    opacity: .5;
+  }
+}
+.about-us{
+  .container{
+    padding: $defaultContentPadding;
+  }
+}
+.about-us-contents{
+  span{
+    p{
+      color: $themeColor;
+      position: relative;
+      margin-left: 50px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      &::before{
+        content: '';
+        height: 1px;
+        width: 40px;
+        background: $themeColor;
+        position: absolute;
+        left: -50px;
+        bottom: 8px;
+      }
+    }
+  }
+  h2{
+    width: 60%;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  p{
+    padding-right: 5%;
+    font-size: 14px;
+    @extend %poppinsRegularForParagraph
+  }
+}
+.about-us-inner{
+  position: relative;
+  img{
+    width: 95%;
+  }
+  a{
+    transition-duration: .3s;
+    position: absolute;
+    background: $themeBackground;
+    @extend %alignCenterThings;
+    @extend %defaultButton;
+    border-radius: 50px;
+    padding: 25px 30px;
+    i{
+      font-size: 20px;
+    }
+    &:hover{
+      opacity: .8;
+    }
+  }
+}
+.food-carousel{
+  background: #FFFAFA;
+  .container{
+    padding: $defaultContentPadding;
+    span{
+      p{
+        color: $themeColor;
+        position: relative;
+        margin-left: 50px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        &::before{
+          content: '';
+          height: 1px;
+          width: 40px;
+          background: $themeColor;
+          position: absolute;
+          left: -50px;
+          bottom: 9px;
+        }
+      }
+    }
+    h2{
+      @extend %poppinsBold
+    }
+  }
+  .owl-carousel{
+    z-index: 1;
+  }
+  .item{
+    position: relative;
+    z-index: 2;
+    .rate{
+      position: absolute;
+      z-index: 3;
+      @extend %defaultButton;
+      padding: 20px 15px;
+      border-radius: 3px;
+      h3{
+        font-size: 22px;
+        margin: 0px;
+        font-weight: bold;
+      }
+    }
+    img{
+      position: relative;
+    }
+    .item-title-para{
+      color: #fff;
+      padding: 35px;
+      padding-bottom: 20px;
+      position: absolute;
+      bottom: -55%;
+      background: $themeBackground;
+      transition-duration: 0.7s;
+      h2{
+        font-size: 21px;
+        margin-bottom: 20px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+    &:hover .item-title-para{
+      bottom: 0px;
+    }
+  }
+  .owl-nav{
+    display: block !important;
+    .owl-prev{
+      @extend %alignCenterThings;
+      margin-top: 240px;
+      margin-left: 60px;
+      margin-bottom: 40px
+    }
+    .owl-next{
+      @extend %alignCenterThings;
+      margin-top: 240px;
+    }
+    i{
+      color: $themeColor;
+      background: transparent;
+      opacity: 1;
+      font-size: 22px;
+    }
+  }
+}
+.chef-intro{
+  .container{
+    padding: $defaultContentPadding;
+    .chef-intro-header{
+      span{
+        p{
+          color: $themeColor;
+        }
+      }
+      h2{
+        font-weight: bold;
+      }
+    }
+    .chef-intro-inner{
+      position: relative;
+      padding: 5px 0px;
+      border: 1px solid #00000059;
+      border-radius: 3px;
+      img{
+        width: 97%;
+        position: relative;
+      }
+      .chef-img{
+        position: relative;
+        &::after{
+          content: '';
+          position: absolute;
+          width: 97%;
+          height: 100%;
+          left: 1.6%;
+          background: #0000009d;
+          border-radius: 3px;
+          visibility: hidden;
+        }
+      }
+      ul{
+        @extend %alignCenterThings;
+        top: 42%;
+        left: 47%;
+        visibility: hidden;
+        li{
+          a{
+            padding: 10px 15px;
+            margin: 10px;
+            background: #fff;
+            border-radius: 30px;
+            i{
+              color: black;
+            }
+          }
+        }
+      }
+      h3{
+        margin: 0px;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      p{
+        margin: 0px;
+      }
+      &:hover{
+        ul{
+          visibility: visible;
+        }
+        .chef-img{
+          &::after{
+            visibility: visible;
+          }
+        }
+        h3{
+          color: $themeColor;
+        }
+        border: 1px solid #fb58498f;
+      }
+    }
+  }
+}
+.contact{
+  background: url(../images/reservation-bg.jpg) center no-repeat;
+  background-size: cover;
+  color: #fff;
+  .container{
+    padding: $defaultContentPadding;
+    .contact-left{
+      span{
+        p{
+          position: relative;
+          margin-left: 40px;
+          letter-spacing: 2px;
+          &::before{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 30px;
+            background: #fff;
+            top: 45%;
+            margin-left: -40px;
+          }
+        }
+      }
+      h2{
+        font-weight: bold;
+        font-size: 30px;
+      }
+      p{
+        padding-right: 40px;
+      }
+      i{
+        @extend %defaultButton;
+        padding: 20px 22px;
+        border-radius: 30px;
+        font-size: 22px;
+        position: absolute;
+        top: -20px;
+        left: 42%;
+      }
+      .fa-envelope{
+        padding: 20px;
+        left: 40%;
+      }
+      .white-bg{
+        position: relative;
+        background: #fff;
+        color: black;
+        padding: 40px 20px;
+        border-radius: 5px;
+        h5{
+          margin-top: 15px;
+          font-weight: bold;
+        }
+        ul{
+          margin-top: 15px;
+          li{
+            a{
+              color: black;
+              transition-duration: .3s;
+              &:hover{
+                color: $themeColor;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact-inner{
+      h2{
+        color: black;
+        font-weight: bold;
+      }
+      input{
+        border: 1px solid #00000027;
+        border-radius: 5px;
+        padding: 10px;
+        &:focus{
+          outline: none;
+          border: 1px solid #ff24108f;
+        }
+        &::placeholder{
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+      .message{
+        padding: 60px 10px;
+        &::placeholder{
+          padding-top: 0px;
+          vertical-align: top;
+        }
+      }
+      .btn{
+        @extend %defaultButton;
+        width: 100%;
+      }
+      .selection{
+        outline: none;
+        border: 1px solid #00000027;
+      }
+    }
+  }
+}
