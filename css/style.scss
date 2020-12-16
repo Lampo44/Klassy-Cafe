@@ -35,6 +35,7 @@ body{
     list-style: none;
   }
 }
+// <<<<<<Navbar SCSS>>>>>>
 .navbar{
   background: #fff;
   padding: $defaultContainerPadding;
@@ -84,6 +85,7 @@ body{
     }
   }
 }
+// <<<<<<<<<<Banner SCSS>>>>>>>
 .top-left-bg{
   position: relative;
   height: 100%;
@@ -138,6 +140,7 @@ body{
     opacity: .5;
   }
 }
+// <<<<<<<About Us SCSS>>>>>>
 .about-us{
   .container{
     padding: $defaultContentPadding;
@@ -194,6 +197,7 @@ body{
     }
   }
 }
+// <<<<<<<<<<FoodCarousel SCSS>>>>>>>>>>>
 .food-carousel{
   background: #FFFAFA;
   .container{
@@ -263,15 +267,17 @@ body{
   }
   .owl-nav{
     display: block !important;
+    opacity: .6;
     .owl-prev{
       @extend %alignCenterThings;
       margin-top: 240px;
-      margin-left: 60px;
+      margin-left: 2%;
       margin-bottom: 40px
     }
     .owl-next{
       @extend %alignCenterThings;
       margin-top: 240px;
+      margin-left: -2%;
     }
     i{
       color: $themeColor;
@@ -281,6 +287,7 @@ body{
     }
   }
 }
+// <<<<<<<<<Chef Intro SCSS>>>>>>>>>>
 .chef-intro{
   .container{
     padding: $defaultContentPadding;
@@ -288,6 +295,7 @@ body{
       span{
         p{
           color: $themeColor;
+          letter-spacing: 2px;
         }
       }
       h2{
@@ -358,6 +366,7 @@ body{
     }
   }
 }
+// <<<<<<<<<Contact SCSS>>>>>>>
 .contact{
   background: url(../images/reservation-bg.jpg) center no-repeat;
   background-size: cover;
@@ -457,6 +466,55 @@ body{
       .selection{
         outline: none;
         border: 1px solid #00000027;
+      }
+    }
+  }
+}
+// <<<<<<<Tabs SCSS>>>>>>>>
+.tabs-main{
+  .container{
+    padding: $defaultContentPadding;
+    .tabs-header{
+      span{
+        p{
+          color: $themeColor;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .nav-pills{
+      .nav-link.active{
+        background: transparent !important;
+        span{
+          p{
+            color: $themeColor;
+            margin: 0px;
+            font-weight: bold;
+          }
+        }
+      }
+      .nav-link{
+        span{
+          p{
+            color: black;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    ul{
+      li{
+        h4{
+          font-weight: bold;
+        }
+        .price{
+          @extend %defaultButton;
+          padding: 30px 20px;
+          margin-top: 10px;
+          border-radius: 3px;
+          font-size: 18px;
+          font-weight: bold;
+        }
       }
     }
   }

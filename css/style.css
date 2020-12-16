@@ -18,7 +18,7 @@ body, .top-left-bg .btn, .about-us-contents p {
           transform: translate(-50%, -50%);
 }
 
-.top-left-bg .btn, .owl-prev i, .owl-next i, .about-us-inner a, .food-carousel .item .rate, .contact .container .contact-left i, .contact .container .contact-inner .btn {
+.top-left-bg .btn, .owl-prev i, .owl-next i, .about-us-inner a, .food-carousel .item .rate, .contact .container .contact-left i, .contact .container .contact-inner .btn, .tabs-main .container ul li .price {
   color: #fff;
   padding: 8px 20px;
   background: #FB5849;
@@ -289,16 +289,18 @@ body ul {
 
 .food-carousel .owl-nav {
   display: block !important;
+  opacity: .6;
 }
 
 .food-carousel .owl-nav .owl-prev {
   margin-top: 240px;
-  margin-left: 60px;
+  margin-left: 2%;
   margin-bottom: 40px;
 }
 
 .food-carousel .owl-nav .owl-next {
   margin-top: 240px;
+  margin-left: -2%;
 }
 
 .food-carousel .owl-nav i {
@@ -314,6 +316,7 @@ body ul {
 
 .chef-intro .container .chef-intro-header span p {
   color: #FB5849;
+  letter-spacing: 2px;
 }
 
 .chef-intro .container .chef-intro-header h2 {
@@ -533,5 +536,41 @@ body ul {
 .contact .container .contact-inner .selection {
   outline: none;
   border: 1px solid #00000027;
+}
+
+.tabs-main .container {
+  padding: 0px 100px;
+}
+
+.tabs-main .container .tabs-header span p {
+  color: #FB5849;
+  letter-spacing: 2px;
+}
+
+.tabs-main .container .nav-pills .nav-link.active {
+  background: transparent !important;
+}
+
+.tabs-main .container .nav-pills .nav-link.active span p {
+  color: #FB5849;
+  margin: 0px;
+  font-weight: bold;
+}
+
+.tabs-main .container .nav-pills .nav-link span p {
+  color: black;
+  font-weight: bold;
+}
+
+.tabs-main .container ul li h4 {
+  font-weight: bold;
+}
+
+.tabs-main .container ul li .price {
+  padding: 30px 20px;
+  margin-top: 10px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
