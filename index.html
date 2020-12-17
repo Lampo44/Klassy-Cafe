@@ -19,7 +19,7 @@
   </head>
   <body>
     <!-- Navigation Section starts -->
-      <nav class="navbar navbar-light amber lighten-4 mb-0 navbar-expand-lg sticky-top">
+      <nav class="navbar navbar-light amber lighten-4 mb-0 navbar-expand-lg sticky-top primary-nav" id="primary-nav">
         <div class="container">
           <a class="navbar-brand" href="#"><img src="images/klassy-logo.png" alt="Logo"></a>
           <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
@@ -27,26 +27,26 @@
             <div class="animated-icon1"><span></span><span></span><span></span></div>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent20">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto nav-pills">
               <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Menu</a>
+                <a class="nav-link" href="#menu">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Chefs</a>
+                <a class="nav-link" href="#chefs">Chefs</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link dropdown-menu-custom" href="#">Features<i class="fa fa-angle-down"></i></a>
-                <ul class="dropdown-menu-custom-parent">
-                  <li><a href="#">Feature page 1</a></li>
-                  <li><a href="#">Feature page 2</a></li>
-                  <li><a href="#">Feature page 3</a></li>
-                  <li><a href="#">Feature page 4</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">Features<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu fade-up">
+                  <li><a class="dropdown-item" href="#">Feature page 1</a></li>
+                  <li><a class="dropdown-item" href="#">Feature page 2</a></li>
+                  <li><a class="dropdown-item" href="#">Feature page 3</a></li>
+                  <li><a class="dropdown-item" href="#">Feature page 4</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -85,7 +85,7 @@
     </div>
     <!-- Carousel Section ends -->
     <!-- About Us section starts -->
-    <section class="about-us py-5 mb-5">
+    <section class="about-us py-5 mb-5" id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -112,7 +112,7 @@
     </section>
     <!-- About Us section ends -->
     <!-- FoodCarousel section starts -->
-    <section class="food-carousel pt-5">
+    <section class="food-carousel py-5" id="menu">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 py-5 pr-5">
@@ -123,7 +123,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid">
+      <div class="container-fluid pb-5">
         <div class="owl-carousel owl-theme pt-5" id="foodCarousel">
           <div class="item">
             <div class="rate">
@@ -180,7 +180,7 @@
     </section>
     <!-- FoodCarousel Section ends -->
     <!-- ChefIntro Section starts -->
-    <section class="chef-intro mt-5 pb-5">
+    <section class="chef-intro mt-5 pb-5" id="chefs">
       <div class="container">
         <div class="row py-5">
           <div class="col-lg-12 text-center pt-5">
@@ -687,6 +687,16 @@
           tabTrigger.show()
         })
       })
+      // Bootstrap Shrink navbar after scroll
+      $(document).on("scroll", function(){
+
+        if ($(document).scrollTop() > 120){
+            $(".primary-nav").addClass("shrink");
+        } else {
+            $(".primary-nav").removeClass("shrink");
+        }
+
+      });
       // Owl Carousel
       $('#slider').owlCarousel({
         loop:true,
