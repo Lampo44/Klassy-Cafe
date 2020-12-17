@@ -39,7 +39,7 @@ body ul {
 
 .navbar {
   background: #fff;
-  padding: 20px 130px;
+  padding: 20px 50px;
   -webkit-box-shadow: 0px 3px 20px 0px #0000002b;
           box-shadow: 0px 3px 20px 0px #0000002b;
 }
@@ -133,6 +133,11 @@ body ul {
           transform: translateY(-50%);
 }
 
+.owl-prev:focus, .owl-next:focus {
+  outline: none;
+  border: none;
+}
+
 .owl-prev {
   left: 4rem;
 }
@@ -154,7 +159,7 @@ body ul {
 }
 
 .about-us .container {
-  padding: 0px 100px;
+  padding: 0px 20px;
 }
 
 .about-us-contents span p {
@@ -216,7 +221,7 @@ body ul {
 }
 
 .food-carousel .container {
-  padding: 0px 100px;
+  padding: 0px 20px;
 }
 
 .food-carousel .container span p {
@@ -298,6 +303,11 @@ body ul {
   margin-bottom: 40px;
 }
 
+.food-carousel .owl-nav .owl-prev:focus {
+  outline: none;
+  border: none;
+}
+
 .food-carousel .owl-nav .owl-next {
   margin-top: 240px;
   margin-left: -2%;
@@ -311,7 +321,7 @@ body ul {
 }
 
 .chef-intro .container {
-  padding: 0px 100px;
+  padding: 0px 20px;
 }
 
 .chef-intro .container .chef-intro-header span p {
@@ -400,7 +410,7 @@ body ul {
 }
 
 .contact .container {
-  padding: 0px 100px;
+  padding: 0px 20px;
 }
 
 .contact .container .contact-left span p {
@@ -539,7 +549,7 @@ body ul {
 }
 
 .tabs-main .container {
-  padding: 0px 100px;
+  padding: 0px 20px;
 }
 
 .tabs-main .container .tabs-header span p {
@@ -572,5 +582,44 @@ body ul {
   border-radius: 3px;
   font-size: 18px;
   font-weight: bold;
+}
+
+footer {
+  background: #FB5849;
+  color: #fff;
+}
+
+footer .container {
+  padding: 0px 20px;
+}
+
+footer .container .social-icons ul {
+  margin: 0px;
+}
+
+footer .container .social-icons ul li {
+  padding-right: 15px;
+}
+
+footer .container .social-icons ul li:nth-child(1) a {
+  padding: 8px 17px;
+}
+
+footer .container .social-icons ul li:nth-child(2) a {
+  padding: 8px 13px;
+}
+
+footer .container .social-icons ul li a {
+  padding: 8px 14px;
+  background: #fff;
+  color: #FB5849;
+  font-size: 20px;
+  border-radius: 30px;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+}
+
+footer .container .social-icons ul li:hover a {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

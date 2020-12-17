@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-$defaultContainerPadding: 20px 130px;
-$defaultContentPadding: 0px 100px;
+$defaultContainerPadding: 20px 50px;
+$defaultContentPadding: 0px 20px;
 $themeBackground: #FB5849;
 $themeColor: #FB5849;
 $defaultTransition: all 0.5s ease;
@@ -121,6 +121,10 @@ body{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  &:focus{
+    outline: none;
+    border: none;
+  }
 }
 .owl-prev{
   left: 4rem;
@@ -272,7 +276,11 @@ body{
       @extend %alignCenterThings;
       margin-top: 240px;
       margin-left: 2%;
-      margin-bottom: 40px
+      margin-bottom: 40px;
+      &:focus{
+        outline: none;
+        border: none;
+      }      
     }
     .owl-next{
       @extend %alignCenterThings;
@@ -514,6 +522,45 @@ body{
           border-radius: 3px;
           font-size: 18px;
           font-weight: bold;
+        }
+      }
+    }
+  }
+}
+// <<<<<<<<<<<<Footer SCSS>>>>>>>>
+footer{
+  background: $themeBackground;
+  color: #fff;
+  .container{
+    padding: $defaultContentPadding;
+    .social-icons{
+      ul{
+        margin: 0px;
+        li{
+          padding-right: 15px;
+          &:nth-child(1){
+            a{
+              padding: 8px 17px;
+            }
+          }
+          &:nth-child(2){
+            a{
+              padding: 8px 13px;
+            }
+          }
+          a{
+            padding: 8px 14px;
+            background: #fff;
+            color: $themeColor;
+            font-size: 20px;
+            border-radius: 30px;
+            transition-duration: .3s;
+          }
+          &:hover{
+            a{
+              color: black;
+            }
+          }
         }
       }
     }
