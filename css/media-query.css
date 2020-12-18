@@ -84,7 +84,49 @@
   ##Screen Width = 768px 
 */
 @media (min-width: 768px) and (max-width: 991px) {
-  /* CSS */
+  .navbar .navbar-nav {
+    text-align: center;
+  }
+  .navbar .navbar-nav .nav-item {
+    border-top: 1px solid #00000010;
+    padding: 8px;
+  }
+  .navbar .navbar-nav .dropdown .dropdown-toggle::after {
+    display: none;
+    visibility: hidden;
+    content: '';
+  }
+  .navbar .navbar-nav .dropdown .dropdown-menu {
+    text-align: center;
+    border: none;
+  }
+  .navbar .navbar-nav .dropdown .dropdown-menu li {
+    padding: 8px;
+    border-top: 1px solid #00000013;
+  }
+  .navbar .navbar-toggler {
+    padding: .75rem;
+    border: none;
+  }
+  .navbar .navbar-toggler:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .food-carousel .item .rate {
+    padding: 8px 10px;
+  }
+  .food-carousel .item .rate::after {
+    content: 'Tap to see details';
+  }
+  .food-carousel .item .item-title-para {
+    bottom: -65% !important;
+  }
+  .food-carousel .item:hover .item-title-para {
+    bottom: 0% !important;
+  }
+  .contact .fa {
+    left: 46% !important;
+  }
 }
 
 /*
@@ -167,15 +209,110 @@
   ##Device = Extra large (xl)
   ##Screen Width = 1200px
 */
-@media (min-width: 1200px) {
-  /* CSS */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .top-left-bg {
+    height: 99.5%;
+  }
+  .food-carousel .item .rate {
+    padding: 8px 10px;
+  }
+  .food-carousel .item .item-title-para {
+    bottom: -80% !important;
+  }
+  .food-carousel .item:hover .item-title-para {
+    bottom: 0% !important;
+  }
+  .footer-inner ul {
+    text-align: right !important;
+  }
 }
 
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
-@media (min-width: 320px) {
-  /* CSS */
+@media (min-width: 320px) and (max-width: 575px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .navbar .navbar-nav {
+    text-align: center;
+  }
+  .navbar .navbar-nav .nav-item {
+    border-top: 1px solid #00000010;
+    padding: 8px;
+  }
+  .navbar .navbar-nav .dropdown .dropdown-toggle::after {
+    display: none;
+    visibility: hidden;
+    content: '';
+  }
+  .navbar .navbar-nav .dropdown .dropdown-menu {
+    text-align: center;
+    border: none;
+  }
+  .navbar .navbar-nav .dropdown .dropdown-menu li {
+    padding: 8px;
+    border-top: 1px solid #00000013;
+  }
+  .navbar .navbar-toggler {
+    padding: 10px;
+    border: none;
+  }
+  .navbar .navbar-toggler:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .owl-carousel .owl-nav .owl-prev .fa {
+    padding: 5px 13px;
+    font-size: 28px;
+    margin-left: -240%;
+  }
+  .owl-carousel .owl-nav .owl-next .fa {
+    padding: 5px 13px;
+    font-size: 28px;
+    margin-right: -310%;
+  }
+  .about-us .about-us-contents h2 {
+    width: 80%;
+  }
+  .about-us .about-us-contents img {
+    padding: 10px 0px;
+  }
+  .food-carousel .item .rate:after {
+    content: 'Tap to see details';
+  }
+  .food-carousel .owl-carousel .owl-nav .owl-next {
+    margin-right: 0px;
+    margin-left: -35%;
+  }
+  .food-carousel .owl-carousel .owl-nav .owl-prev {
+    margin-left: 25%;
+  }
+  .chef-intro .chef-intro-inner {
+    margin: 5px 0px;
+  }
+  .contact .contact-inner .py {
+    padding: 0px !important;
+  }
+  .tab-inner {
+    position: relative;
+    border-top: 1px solid #0000000a;
+  }
+  .tab-inner ul {
+    display: inline !important;
+    width: 100%;
+  }
+  .tab-inner ul li .price {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+  }
+  .footer-inner .footer-logo {
+    padding: 30px 0px;
+  }
+  .footer-inner .credits ul {
+    text-align: center !important;
+  }
 }
 /*# sourceMappingURL=media-query.css.map */

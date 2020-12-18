@@ -132,8 +132,62 @@ $themeColor: #FB5849;
 */
 @media (min-width: $mediumDeviceWidth) and (max-width:991px){
 
-  /* CSS */
-
+  .navbar{
+    .navbar-nav{
+      text-align: center;
+      .nav-item{
+        border-top: 1px solid #00000010;
+        padding: 8px;
+      }
+      .dropdown{
+        .dropdown-toggle{
+          &::after{
+            display: none;
+            visibility: hidden;
+            content: '';
+          }
+        }
+        .dropdown-menu{
+          text-align: center;
+          border: none;
+          li{
+            padding: 8px;
+            border-top: 1px solid #00000013;
+          }
+        }
+      }
+    }
+    .navbar-toggler{
+      padding: .75rem;
+      border: none;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+  .food-carousel{
+    .item{
+      .rate{
+        padding: 8px 10px;
+        &::after{
+          content: 'Tap to see details';
+        }
+      }
+      .item-title-para{
+        bottom: -65% !important;
+      }
+      &:hover{
+        .item-title-para{
+          bottom: 0% !important;
+        }
+      }
+    }
+  }
+  .contact{
+    .fa{
+      left: 46% !important;
+    }
+  }
 }
 
 /*
@@ -225,10 +279,31 @@ $themeColor: #FB5849;
   ##Device = Extra large (xl)
   ##Screen Width = 1200px
 */
-@media (min-width: $extraLargeDeviceWidth){
+@media (min-width: $extraLargeDeviceWidth) and (max-width:1400px){
 
-  /* CSS */
-
+  .top-left-bg{
+    height: 99.5%;
+  }
+  .food-carousel{
+    .item{
+      .rate{
+        padding: 8px 10px;
+      }
+      .item-title-para{
+        bottom: -80% !important;
+      }
+      &:hover{
+        .item-title-para{
+          bottom: 0% !important;
+        }
+      }
+    }
+  }
+  .footer-inner{
+    ul{
+      text-align: right !important;
+    }
+  }
 }
 
 /* 
@@ -236,8 +311,125 @@ $themeColor: #FB5849;
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: $extraSmallDeviceWidth){
+@media (min-width: $extraSmallDeviceWidth) and (max-width:575px){
   
-  /* CSS */
-  
+  .navbar{
+    padding: 10px 20px;
+    .navbar-nav{
+      text-align: center;
+      .nav-item{
+        border-top: 1px solid #00000010;
+        padding: 8px;
+      }
+      .dropdown{
+        .dropdown-toggle{
+          &::after{
+            display: none;
+            visibility: hidden;
+            content: '';
+          }
+        }
+        .dropdown-menu{
+          text-align: center;
+          border: none;
+          li{
+            padding: 8px;
+            border-top: 1px solid #00000013;
+          }
+        }
+      }
+    }
+    .navbar-toggler{
+      padding: 10px;
+      border: none;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+  .owl-carousel{
+    .owl-nav{
+      .owl-prev{
+        .fa{
+          padding: 5px 13px;
+          font-size: 28px;
+          margin-left: -240%;
+        }
+      }
+      .owl-next{
+        .fa{
+          padding: 5px 13px;
+          font-size: 28px;
+          margin-right: -310%;
+        }
+      }
+    }
+  }
+  .about-us{
+    .about-us-contents{
+      h2{
+        width: 80%;
+      }
+      img{
+        padding: 10px 0px;
+      }
+    }
+  }
+  .food-carousel{
+    .item{
+      .rate{
+        &:after{
+          content: 'Tap to see details';
+        }
+      }
+    }
+    .owl-carousel{
+      .owl-nav{
+        .owl-next{
+          margin-right: 0px;
+          margin-left: -35%;
+        }
+        .owl-prev{
+          margin-left: 25%;
+        }
+      }
+    }
+  }
+  .chef-intro{
+    .chef-intro-inner{
+      margin: 5px 0px;
+    }
+  }
+  .contact{
+    .contact-inner{
+      .py{
+        padding: 0px !important;
+      }
+    }
+  }
+  .tab-inner{
+    position: relative;
+    border-top: 1px solid #0000000a;
+    ul{
+      display: inline !important;
+      width: 100%;
+      li{
+        .price{
+          position: absolute;
+          top: 20px;
+          right: 0px;
+        }
+      }
+    }
+  }
+  .footer-inner{
+    .footer-logo{
+      padding: 30px 0px;
+    }
+    .credits{
+      ul{
+        text-align: center !important;
+      }
+    }
+  }
 }
