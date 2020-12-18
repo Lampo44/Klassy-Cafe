@@ -1,0 +1,243 @@
+// Variables
+$extraSmallDeviceWidth: 320px;
+$smallDeviceWidth: 576px;
+$mediumDeviceWidth: 768px;
+$largeDeviceWidth: 992px;
+$extraLargeDeviceWidth: 1200px;
+$themeBackground: #FB5849;
+$themeColor: #FB5849;
+%defaultButton{
+  color: $themeColor;
+  padding: 8px 20px;
+  background: $themeBackground;
+  border: none;
+}
+%foodCarouselAfter{
+  &::after{
+    content: 'Tap to see details';
+    @extend %defaultButton;
+    position: absolute;
+  }
+}
+/*
+  ##Device = small (sm)
+  ##Screen Width = 576px 
+*/
+@media (min-width: $smallDeviceWidth) and (max-width: 767px){
+
+  .navbar{
+    .navbar-nav{
+      text-align: center;
+      .nav-item{
+        border-top: 1px solid #00000010;
+        padding: 8px;
+      }
+      .dropdown{
+        .dropdown-toggle{
+          &::after{
+            display: none;
+            visibility: hidden;
+            content: '';
+          }
+        }
+        .dropdown-menu{
+          text-align: center;
+          border: none;
+          li{
+            padding: 8px;
+            border-top: 1px solid #00000013;
+          }
+        }
+      }
+    }
+    .navbar-toggler{
+      padding: .75rem;
+      border: none;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+  .food-carousel{
+    .item{
+      overflow: hidden;
+      .rate{
+        padding: 8px 10px;
+        &::after{
+          content: 'Tap to see details';
+        }
+      }
+      .item-title-para{
+        bottom: -62%;
+        padding: 5px;
+        padding-top: 2rem;
+        h2{
+          font-size: 18px;
+        }
+        p{
+          font-size: 11px;
+        }
+      }
+      &:hover{
+        .rate{
+          &::after{
+            content: '';
+          }
+        }
+      }
+    }
+  }
+  .about-us{
+    .about-us-contents{
+      h2{
+        font-size: 32px;
+        width: 80%;
+      }
+      p{
+        padding: 0px;
+      }
+    }
+    .about-us-inner{
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .food-carousel{
+    .owl-nav{
+      .owl-prev{
+        margin-top: 170px;
+        margin-left: 3%;
+      }
+      .owl-next{
+        margin-top: 170px;
+      }
+    }
+  }
+  .contact{
+    .contact-left{
+      .fa-envelope{
+        left: 44% !important;
+      }
+      .fa-phone{
+        left: 44% !important;
+      }
+    }
+  }
+}
+
+/*
+  ##Device = Medium (md)
+  ##Screen Width = 768px 
+*/
+@media (min-width: $mediumDeviceWidth) and (max-width:991px){
+
+  /* CSS */
+
+}
+
+/*
+  ##Device = Large (lg)
+  ##Screen Width = 992px 
+*/
+@media (min-width: $largeDeviceWidth) and (max-width:1400px){
+
+  .navbar-nav{
+    .dropdown{
+      &:hover{
+        .dropdown-menu{
+          transition: .3s; 
+          opacity:1; 
+          visibility:visible; 
+          top:150% !important; 
+          transform: rotateX(0deg);
+          margin-top: 0px;
+        }
+      }
+    }
+    .dropdown{
+      a{
+        &::after{
+          content: '';
+          visibility: hidden;
+        }
+      }
+    }
+    .nav-item{
+      .nav-link{
+        color: black;
+        padding-left: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        &:hover{
+          color: $themeColor;
+        }
+      }
+      .dropdown-menu{
+        background: #f7f7f7;
+        display:block; 
+        opacity: 0;  
+        visibility: hidden; 
+        transition:.3s !important; 
+        margin-top: 30%;
+      }
+      .dropdown-menu.fade-up{
+        top: 115% !important;
+        padding: 0px;
+        width: 150%;
+        border-radius: 0px;
+        border: none;
+        margin-left: 2rem;
+        li{
+          padding: 10px 20px;
+          border-bottom: 1px solid #00000007;
+          cursor: pointer;
+          transition-duration: .3s !important;
+          &:hover{
+            background: #fff;
+            a{
+              padding: 0px;
+              padding-left: .25rem;
+              color: $themeColor;
+              background: #fff;
+            }
+          }
+          a{
+            padding: 0px;
+            color: black;
+            background: #f7f7f7;
+            transition-duration: .3s;
+            font-size: 14px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+      i{
+        margin-left: 5px;
+        font-size: 12px;
+      }
+    }
+  }
+
+}
+
+/*
+  ##Device = Extra large (xl)
+  ##Screen Width = 1200px
+*/
+@media (min-width: $extraLargeDeviceWidth){
+
+  /* CSS */
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: $extraSmallDeviceWidth){
+  
+  /* CSS */
+  
+}
