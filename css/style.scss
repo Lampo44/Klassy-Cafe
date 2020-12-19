@@ -569,5 +569,8 @@ footer{
   .loader{
     display: inline-block;
     position: relative;
+    width: 30px;
+    height: 30px;
+    animation: loader 2s infinite ease;
   }
 }

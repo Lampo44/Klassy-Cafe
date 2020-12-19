@@ -628,5 +628,9 @@ footer .container .social-icons ul li:hover a {
 .loader-wrapper .loader {
   display: inline-block;
   position: relative;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: loader 2s infinite ease;
+          animation: loader 2s infinite ease;
 }
 /*# sourceMappingURL=style.css.map */
