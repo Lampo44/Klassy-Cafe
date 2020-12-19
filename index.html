@@ -650,6 +650,9 @@
       </div>
     </footer>
     <!-- Footer Section ends -->
+    <div class="loader-wrapper">
+      <span class="loader"><img src="images/loading.gif" alt="Loading"></span>
+    </div>
     <!-- Bootstrap Bundle JS -->
     <script src="js/bootstrap.bundle.js"></script>
     <!-- Jquery JS -->
@@ -664,6 +667,10 @@
     <script src="js/slick.min.js"></script>
     <!-- Custom JS -->
     <script>
+      // Website Loading animation
+      $(window).on("load",function(){
+        $(".loader-wrapper").fadeOut("slow");
+      });
       // Bootstrap Menu
       $(document).ready(function () {
         $('.first-button').on('click', function () {
