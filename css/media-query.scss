@@ -194,10 +194,10 @@ $themeColor: #FB5849;
   ##Device = Large (lg)
   ##Screen Width = 992px 
 */
-@media (min-width: $largeDeviceWidth) and (max-width:1400px){
+@media (min-width: $largeDeviceWidth){
 
-  .navbar-nav{
-    .dropdown{
+  .navbar-nav  {
+    .dropdown {
       &:hover{
         .dropdown-menu{
           transition: .3s; 

@@ -449,6 +449,12 @@ body{
           padding: 10px;
         }
       }
+      .form-select{
+        &:focus{
+          box-shadow: none;
+          border: 1px solid #ff24108f;
+        }
+      }
       .message{
         padding: 60px 10px;
         &::placeholder{

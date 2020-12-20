@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Lightbox CSS -->
     <link rel="stylesheet" href="css/lightbox.min.css">
-    <!-- Font Awesome CSS -->
+    <!-- Font Awesome 4 CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -19,6 +19,9 @@
     <title>Klassy Cafe</title>
   </head>
   <body>
+    <div class="loader-wrapper">
+      <span class="loader"><img src="images/loading.gif" alt="Loading"></span>
+    </div>
     <!-- Navigation Section starts -->
       <nav class="navbar navbar-light amber lighten-4 mb-0 navbar-expand-lg sticky-top primary-nav" id="primary-nav">
         <div class="container">
@@ -278,7 +281,7 @@
                 <div class="row justify-content-center py-2 py-sm-0">
                   <div class="col-lg-6 col-sm-12 py-sm-2"><input type="text" class="w-100" placeholder="Phone Number*"></div>
                   <div class="col-lg-6 col-sm-12 py-sm-2">
-                    <select name="Number Of Guests" id="form-select" class="w-100 h-100 selection">
+                    <select name="Number Of Guests" id="form-select" class="w-100 h-100 selection form-select">
                       <option value="1">Number Of Guests</option>
                       <option value="2">1</option>
                       <option value="3">2</option>
@@ -296,14 +299,11 @@
                   </div>
                 </div>
                 <div class="row justify-content-center py-2 py-sm-0">
-                  <div class="date col-lg-6 col-sm-12 py-sm-2" data-provide="datepicker">
-                    <input type="text" class="form-control" data-provide="datepicker">
-                    <div class="input-group-addon">
-                      <span class="glyphicon glyphicon-th"></span>
-                    </div>
+                  <div class="form-group py-sm-2 col-lg-6 col-sm-12">
+                    <input class="date form-control" id="date1" type="text" placeholder="d/M/y" title="format: dd/MM/y"/>
                   </div>
                   <div class="col-lg-6 col-sm-12 py-sm-2">
-                    <select name="Number Of Guests" id="form-select" class="w-100 h-100 selection">
+                    <select name="Number Of Guests" id="form-select" class="w-100 h-100 selection form-select">
                       <option value="1">Time</option>
                       <option value="2">Breakfast</option>
                       <option value="3">Lunch</option>

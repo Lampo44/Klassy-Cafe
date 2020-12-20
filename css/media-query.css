@@ -133,7 +133,7 @@
   ##Device = Large (lg)
   ##Screen Width = 992px 
 */
-@media (min-width: 992px) and (max-width: 1400px) {
+@media (min-width: 992px) {
   .navbar-nav .dropdown:hover .dropdown-menu {
     -webkit-transition: .3s;
     transition: .3s;
