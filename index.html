@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="css/slick.css">
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -19,8 +21,8 @@
     <title>Klassy Cafe</title>
   </head>
   <body>
-    <div class="loader-wrapper">
-      <span class="loader"><img src="images/loading.gif" alt="Loading"></span>
+    <div class="loader-bg">
+      <div class="loader"></div>
     </div>
     <!-- Navigation Section starts -->
       <nav class="navbar navbar-light amber lighten-4 mb-0 navbar-expand-lg sticky-top primary-nav" id="primary-nav">
@@ -62,31 +64,29 @@
       </nav>
     <!-- Navigation section ends -->
     <!-- Carousel Section starts -->
-    <div class="row w-100 mb-4">
-      <div class="col-lg-4 col-sm-12 px-0">
-        <div class="top-left-bg">
-          <img src="images/top-left-bg.jpg" alt="top-left-bg">
-          <div class="top-left-bg-contents">
-            <h1>KlassyCafe</h1>
-            <p>THE BEST EXPERIENCE</p>
-            <button class="btn btn-info">Make A Reservation</button>
+    <section class="banner-carousel">
+      <div class="container-fluid">
+        <div class="row w-100 mb-4">
+          <div class="col-lg-4 col-sm-12 px-0">
+            <div class="top-left-bg">
+              <img src="images/top-left-bg.jpg" alt="top-left-bg">
+              <div class="top-left-bg-contents">
+                <h1>KlassyCafe</h1>
+                <p>THE BEST EXPERIENCE</p>
+                <button class="btn btn-info">Make A Reservation</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12 px-0">
+            <div class="slider">
+              <div><img src="images/slide-01.jpg" alt=""></div>
+              <div><img src="images/slide-02.jpg" alt=""></div>
+              <div><img src="images/slide-03.jpg" alt=""></div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-8 col-sm-12 px-0">
-        <div id="slider" class="owl-carousel">
-          <div class="item">
-            <img src="images/slide-01.jpg" alt="">
-          </div>
-          <div class="item">
-            <img src="images/slide-02.jpg" alt="">
-          </div>
-          <div class="item">
-            <img src="images/slide-03.jpg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
     <!-- Carousel Section ends -->
     <!-- About Us section starts -->
     <section class="about-us py-5 mb-5" id="about">
@@ -657,6 +657,8 @@
     <script src="js/bootstrap.bundle.js"></script>
     <!-- Jquery JS -->
     <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- Jquery Migarte JS -->
+    <script src="js/jquery-migrate-3.3.2.min.js"></script>
     <!-- Owl Carousel JS -->
     <script src="js/owl.carousel.min.js"></script>
     <!-- LightBox JS -->
@@ -666,86 +668,6 @@
     <!-- Slick JS -->
     <script src="js/slick.min.js"></script>
     <!-- Custom JS -->
-    <script>
-      // Website Loading animation
-      $(window).on("load",function(){
-        $(".loader-wrapper").fadeOut("slow");
-      });
-      // Bootstrap Menu
-      $(document).ready(function () {
-        $('.first-button').on('click', function () {
-          $('.animated-icon1').toggleClass('open');
-        });
-        $('.second-button').on('click', function () {
-
-          $('.animated-icon2').toggleClass('open');
-        });
-        $('.third-button').on('click', function () {
-
-          $('.animated-icon3').toggleClass('open');
-        });
-      });
-      // Bootstrap Tabs
-      var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
-      triggerTabList.forEach(function (triggerEl) {
-        var tabTrigger = new bootstrap.Tab(triggerEl)
-
-        triggerEl.addEventListener('click', function (event) {
-          event.preventDefault()
-          tabTrigger.show()
-        })
-      })
-      // Bootstrap Shrink navbar after scroll
-      $(document).on("scroll", function(){
-
-        if ($(document).scrollTop() > 120){
-            $(".primary-nav").addClass("shrink");
-        } else {
-            $(".primary-nav").removeClass("shrink");
-        }
-
-      });
-      // Owl Carousel
-      $('#slider').owlCarousel({
-        loop:true,
-        items: 1,
-        margin:0,
-        autoplay: true,
-        nav:true,
-        navText : ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-      })
-      $('#foodCarousel').owlCarousel({
-        loop:true,
-        items: 5,
-        margin:25,
-        autoplay: true,
-        autoplayTimeout:5000,
-        nav:true,
-        navText : ['<i class="fa fa-chevron-right"></i>','<i class="fa fa-chevron-left"></i>'],
-        responsiveClass:true,
-        responsive:{
-          0:{
-              items:1,
-              nav:true
-          },
-          576:{
-              items:3,
-              nav:true
-          },
-          768:{
-              items:3,
-              nav:true
-          },
-          1200:{
-              items:5,
-              nav:true
-          }
-        }
-      })
-      // ScrollReveal
-      ScrollReveal().reveal('.about-us', { delay: 300 });
-      ScrollReveal().reveal('.chef-intro', { delay: 300 });
-      ScrollReveal().reveal('.tabs-main', { delay: 300 });
-    </script>
+    <script src="js/app.js"></script>
   </body>
 </html>

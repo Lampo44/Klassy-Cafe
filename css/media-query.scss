@@ -281,6 +281,13 @@ $themeColor: #FB5849;
 */
 @media (min-width: $extraLargeDeviceWidth) and (max-width:1400px){
 
+  .dropdown{
+    line-height: 23px !important;
+    .dropdown-toggle{
+      padding-top: 0px;
+      margin-top: -5px;
+    }
+  }
   .top-left-bg{
     height: 99.5%;
   }
@@ -290,7 +297,7 @@ $themeColor: #FB5849;
         padding: 8px 10px;
       }
       .item-title-para{
-        bottom: -80% !important;
+        bottom: -59% !important;
       }
       &:hover{
         .item-title-para{

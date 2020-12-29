@@ -210,6 +210,13 @@
   ##Screen Width = 1200px
 */
 @media (min-width: 1200px) and (max-width: 1400px) {
+  .dropdown {
+    line-height: 23px !important;
+  }
+  .dropdown .dropdown-toggle {
+    padding-top: 0px;
+    margin-top: -5px;
+  }
   .top-left-bg {
     height: 99.5%;
   }
@@ -217,7 +224,7 @@
     padding: 8px 10px;
   }
   .food-carousel .item .item-title-para {
-    bottom: -80% !important;
+    bottom: -59% !important;
   }
   .food-carousel .item:hover .item-title-para {
     bottom: 0% !important;
